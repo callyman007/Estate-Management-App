@@ -1,0 +1,71 @@
+/* Adjust carousel item spacing */
+.carousel-related .react-multi-carousel-item {
+  /* This adds padding around each item */
+  padding: 0 1rem; /* Adjust the horizontal padding to create gaps */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+/* Adjust item width to account for padding and gaps */
+.property-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+  padding: 0;
+  width: 100%; /* Ensure it takes full width of the carousel item */
+  height: 30rem;
+  box-sizing: border-box;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.property-card a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
+}
+
+/* Adjust item container styles if needed */
+.carousel-related .react-multi-carousel-track {
+  /* Adjust track container styles */
+  display: flex;
+  gap: 1rem; /* Add gap between carousel items */
+}
+
+/* Ensure arrows are correctly styled and positioned */
+.carousel-related .react-multi-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-related .react-multi-carousel-arrow--left {
+  left: 0;
+}
+
+.carousel-related .react-multi-carousel-arrow--right {
+  right: 0;
+}
+
+/* Adjust dot styling if needed */
+.carousel-related .react-multi-carousel-dot {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+
+}
+
+.carousel-related .react-multi-carousel-dot--active {
+  background-color: white;
+}

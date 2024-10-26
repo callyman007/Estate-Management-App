@@ -1,0 +1,225 @@
+/* Welcome.css */
+
+.welcome-page {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 1.25rem; /* 20px / 16px */
+    position: relative; /* Ensure buttons are positioned correctly */
+}
+
+h1 {
+    font-size: 2rem; /* 32px */
+    margin-bottom: 1.25rem; /* 20px / 16px */
+}
+
+.welcome-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the slider */
+    overflow: hidden; /* Hide overflow */
+    padding: 0 2rem; /* Space for buttons */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.slider {
+    left: 1.5rem;
+    width: 90%;
+    height: 31.25rem; /* Fixed height for image container */
+    border-radius: 1.25rem; /* 20px / 16px */
+    overflow: hidden;
+    position: relative; /* Needed for button positioning */
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%; /* Ensure image covers the container */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+button {
+    
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00274c; /* rgba(0, 39, 76, 0.9) Slightly transparent background */
+    border: none;
+    cursor: pointer;
+    padding: 0.625rem; /* 10px / 16px */
+    border-radius: 0.625rem; /* 10px / 16px */
+    transition: background 0.3s ease; /* Smooth background transition */
+    z-index: 10; /* Ensure buttons are above other content */
+}
+
+.icon {
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+}
+
+
+button:hover {
+    background: rgba(0, 39, 76, 0.7); /* Darker background on hover */
+}
+
+.prev {
+    left: 1rem; /* Position outside the slider */
+}
+
+.next {
+    right: -2rem; /* Position outside the slider */
+}
+
+.indicators {
+    margin-top: 0.625rem; /* 10px / 16px */
+    display: flex;
+    justify-content: center;
+}
+
+.indicator {
+    display: inline-block;
+    width: 0.75rem; /* 12px / 16px */
+    height: 0.75rem; /* 12px / 16px */
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 0.3125rem; /* 5px / 16px */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+/* Media Queries */
+
+/* Max-width 80rem (1280px) */
+@media (max-width: 80rem) {
+    .welcome-slider {
+        width: 80%;
+        padding: 0 1.5rem; /* Adjust padding */
+    }
+
+    .slider {
+        left: 1rem; /* Adjust position */
+        width: 85%;
+        height: 28rem; /* Slightly smaller height */
+    }
+
+    button {
+        padding: 0.5625rem; /* Slightly smaller padding */
+    }
+
+    .prev {
+        left: 1rem; /* Adjust position */
+    }
+
+    .next {
+        right: -1rem; /* Adjust position */
+    }
+
+    .indicator {
+        width: 0.625rem; /* Slightly larger indicators */
+        height: 0.625rem;
+        margin: 0 0.25rem; /* Adjust spacing */
+    }
+}
+
+/* Max-width 64rem (1024px) */
+@media (max-width: 64rem) {
+    .welcome-slider {
+        width: 75%;
+        padding: 0 1rem; /* Reduce padding */
+    }
+
+    .slider {
+        left: 2rem; /* Adjust position */
+        width: 70%;
+        height: 24rem; /* Reduce height */
+    }
+
+    button {
+        padding: 0.5rem; /* Smaller padding */
+    }
+
+    .prev {
+        left: 3rem; /* Adjust position */
+    }
+
+    .next {
+        right: -1rem; /* Adjust position */
+    }
+
+    .indicator {
+        width: 0.5rem; /* Smaller indicators */
+        height: 0.5rem;
+        margin: 0 0.25rem; /* Adjust spacing */
+    }
+}
+
+/* Max-width 50rem (800px) */
+@media (max-width: 50rem) {
+    .welcome-slider {
+        width: 70%;
+        padding: 0 0.75rem; /* Further reduce padding */
+    }
+
+    .slider {
+        left: 0.5rem; /* Adjust position */
+        width: 80%;
+        height: 21rem; /* Reduce height */
+    }
+
+    button {
+        padding: 0.4375rem; /* Even smaller padding */
+    }
+
+    .prev {
+        left: 0.25rem; /* Adjust position */
+    }
+
+    .next {
+        right: -0.75rem; /* Adjust position */
+    }
+
+    .indicator {
+        width: 0.5rem; /* Keep size smaller */
+        height: 0.5rem;
+        margin: 0 0.125rem; /* Adjust spacing */
+    }
+}
+
+/* Max-width 31.25rem (500px) */
+@media (max-width: 31.25rem) {
+    .welcome-slider {
+        width: 100%;
+        padding: 0 0.5rem; /* Minimum padding */
+    }
+    h1 {
+        font-size: 1.5rem; /* 24px */
+        margin-bottom: 1.25rem; /* 20px / 16px */
+    }
+
+    .slider {
+        left: 0.2rem; /* Adjust position */
+        width: 80%;
+        height: 18rem; /* Reduce height */
+    }
+
+    button {
+        padding: 0.375rem; /* Smallest padding */
+    }
+
+    .prev {
+        left: 0; /* Adjust position */
+    }
+
+    .next {
+        right: -0.4rem; /* Adjust position */
+    }
+
+    .indicator {
+        width: 0.375rem; /* Smaller indicators */
+        height: 0.375rem;
+        margin: 0 0.125rem; /* Adjust spacing */
+    }
+}

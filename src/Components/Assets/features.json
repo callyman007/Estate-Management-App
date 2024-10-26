@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Gated Community",
+        "description": "24/7 security personnel and surveillance systems, controlled access points.",
+        "image": "frontend/src/Components/Assets/welcome/welcome_1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Modern Housing Options",
+        "description": "Variety of housing types including single-family homes, townhouses, and apartments.",
+        "image": "frontend/src/Components/Assets/welcome/house_1.png"
+    },
+    {
+        "id": 3,
+        "title": "Green Spaces and Landscaping",
+        "description": "Well-maintained parks, gardens, and walking trails.",
+        "image": "frontend/src/Components/Assets/welcome/house_3.png"
+    },
+    {
+        "id": 4,
+        "title": "Recreational Facilities",
+        "description": "Recreational center with sports courts.",
+        "image": "frontend/src/Components/Assets/welcome/field_1.png"
+    },
+    {
+        "id": 5,
+        "title": "Community Amenities",
+        "description": "On-site shopping center, educational institutions, and healthcare facilities.",
+        "image": "frontend/src/Components/Assets/welcome/welcome_4.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Infrastructure",
+        "description": "Well-paved roads, ample parking spaces, reliable utilities.",
+        "image": "frontend/src/Components/Assets/welcome/welcome_5.png"
+    }
+]

@@ -1,0 +1,207 @@
+/* Testimonials.css */
+.testimonials-container {
+    max-width: 60rem; /* 960px */
+    margin: 0 auto;
+    padding: 2rem; /* 32px */
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonials-container h2 {
+    font-size: 2rem; /* 32px */
+    margin-bottom: 1.5rem; /* 24px */
+    color: #333;
+}
+
+.testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 24px */
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 1.5rem; /* 24px */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-left: 5px solid; /* Default border color */
+}
+
+.testimonial-image {
+    flex-shrink: 0;
+    width: 4rem; /* 64px */
+    height: 4rem; /* 64px */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    flex-grow: 1;
+}
+
+.testimonial-message {
+    font-size: 1.125rem; /* 18px */
+    font-style: italic;
+    margin-bottom: 0.5rem; /* 8px */
+    color: #555;
+}
+
+.testimonial-author {
+    font-size: 1rem; /* 16px */
+    color: #777;
+}
+
+/* Role-based styling */
+.testimonial-item.admin {
+    border-left-color: #ff5722; /* Admin color */
+}
+
+.testimonial-item.staff {
+    border-left-color: #2196f3; /* Staff color */
+}
+
+.testimonial-item.landlord {
+    border-left-color: #4caf50; /* Landlord color */
+}
+
+.testimonial-item.tenant {
+    border-left-color: #ffeb3b; /* Tenant color */
+}
+
+.testimonial-item.dependent {
+    border-left-color: #9c27b0; /* Dependent color */
+}
+
+.testimonial-item.visitor {
+    border-left-color: #795548; /* Visitor color */
+}
+
+/* Media Queries */
+
+/* For screens smaller than 80rem (1280px) */
+@media (max-width: 80rem) {
+    .testimonials-container {
+        padding: 1.5rem; /* 24px */
+    }
+
+    .testimonials-container h2 {
+        font-size: 1.75rem; /* 28px */
+        margin-bottom: 1.25rem; /* 20px */
+    }
+
+    .testimonials-list {
+        gap: 1.25rem; /* 20px */
+    }
+
+    .testimonial-item {
+        padding: 1.25rem; /* 20px */
+    }
+
+    .testimonial-message {
+        font-size: 1rem; /* 16px */
+        margin-bottom: 0.75rem; /* 12px */
+    }
+
+    .testimonial-author {
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+/* For screens smaller than 64rem (1024px) */
+@media (max-width: 64rem) {
+    .testimonials-container {
+        padding: 1.25rem; /* 20px */
+    }
+
+    .testimonials-container h2 {
+        font-size: 1.5rem; /* 24px */
+        margin-bottom: 1rem; /* 16px */
+    }
+
+    .testimonials-list {
+        gap: 1rem; /* 16px */
+    }
+
+    .testimonial-item {
+        padding: 1rem; /* 16px */
+    }
+
+    .testimonial-message {
+        font-size: 0.875rem; /* 14px */
+        margin-bottom: 0.5rem; /* 8px */
+    }
+
+    .testimonial-author {
+        font-size: 0.75rem; /* 12px */
+    }
+}
+
+/* For screens smaller than 50rem (800px) */
+@media (max-width: 50rem) {
+    .testimonials-container {
+        padding: 1rem; /* 16px */
+    }
+
+    .testimonials-container h2 {
+        font-size: 1.25rem; /* 20px */
+        margin-bottom: 0.75rem; /* 12px */
+    }
+
+    .testimonials-list {
+        gap: 0.75rem; /* 12px */
+    }
+
+    .testimonial-item {
+        padding: 0.75rem; /* 12px */
+    }
+
+    .testimonial-message {
+        font-size: 0.75rem; /* 12px */
+        margin-bottom: 0.25rem; /* 4px */
+    }
+
+    .testimonial-author {
+        font-size: 0.625rem; /* 10px */
+    }
+}
+
+/* For screens smaller than 31.25rem (500px) */
+@media (max-width: 31.25rem) {
+    .testimonials-container {
+        padding: 0.75rem; /* 12px */
+    }
+
+    .testimonials-container h2 {
+        font-size: 1rem; /* 16px */
+        margin-bottom: 0.5rem; /* 8px */
+    }
+
+    .testimonials-list {
+        gap: 0.5rem; /* 8px */
+    }
+
+    .testimonial-item {
+        padding: 0.5rem; /* 8px */
+    }
+
+    .testimonial-message {
+        font-size: 0.625rem; /* 10px */
+        margin-bottom: 0.25rem; /* 4px */
+    }
+
+    .testimonial-author {
+        font-size: 0.5rem; /* 8px */
+    }
+}

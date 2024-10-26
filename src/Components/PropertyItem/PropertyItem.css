@@ -1,0 +1,71 @@
+/* PropertyItem.css */
+
+:root {
+  font-size: 16px; /* Base font size for rem units */
+  --primary-color: #00274c; /* Primary color */
+  --border-color: #ddd; /* Border color */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Box shadow color */
+  --shadow-hover-color: rgba(0, 0, 0, 0.2); /* Box shadow color on hover */
+  --focus-ring-color: rgba(0, 39, 76, 0.5); /* Focus ring color */
+  --font-family: Montserrat, sans-serif; /* Font family with fallback */
+}
+
+.property-item {
+  display: block;
+  text-decoration: none;
+  border: 0.125rem solid var(--border-color); /* 2px border */
+  border-radius: 0.5rem; /* 8px border radius */
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem var(--shadow-color); /* 4px 8px shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  color: var(--primary-color);
+  margin: 1rem;
+  font-family: var(--font-family); /* Apply font family */
+}
+
+.property-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.5rem 1rem var(--shadow-hover-color); /* Increased shadow on hover */
+}
+
+.property-item-image {
+  width: 100%;
+  height: 20rem; /* Fixed height for images */
+  display: block;
+  object-fit: cover; /* Ensures the image covers the container */
+  transition: opacity 0.3s ease;
+}
+
+.property-item:hover .property-item-image {
+  opacity: 0.8; /* Slightly fade image on hover */
+}
+
+.property-item-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 1rem;
+}
+
+.property-item-address {
+  font-size: 1rem; /* 16px */
+  color: #666;
+  margin: 0 1rem 0.5rem;
+}
+
+.property-item-price {
+  font-size: 1.125rem; /* 18px */
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0 1rem 1rem;
+  text-align: center; /* Center-align price text */
+}
+
+.property-item:focus {
+  outline: none;
+}
+
+.property-item:focus-visible {
+  box-shadow: 0 0 0 0.25rem var(--focus-ring-color); /* Focus ring */
+}

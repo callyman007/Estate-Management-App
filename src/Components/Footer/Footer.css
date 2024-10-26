@@ -1,0 +1,232 @@
+/* Footer.css */
+.footer {
+  background-color: #00274c;
+  padding: 2rem 1.5rem;
+  margin:0 auto;
+  border-top: 0.0625rem solid #ddd; /* Converted from 1px to rem */
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75rem; /* Converted from 1200px to rem */
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-icon {
+  width: 6.25rem; /* Converted from 100px to rem */
+  height: auto;
+}
+.footer-logo p {
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.footer-links {
+  margin-left: 4rem; /* Already in rem */
+  margin-bottom: 1rem;
+}
+
+.footer-links h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff; /* Changed to white */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links li img {
+  width: 1.25rem; /* Converted from 20px to rem */
+  height: 1.25rem; /* Converted from 20px to rem */
+  margin-right: 0.5rem;
+  background-color: #fff; /* White background for icons */
+  border-radius: 50%; /* Make icons circular */
+  padding: 0.25rem; /* Add padding around icons */
+}
+
+.footer-links li a {
+  color: #fff; /* Changed to white */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-social-icons h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff; /* Changed to white */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem; /* Already in rem */
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 1.5rem; /* Converted from 24px to rem */
+  height: 1.5rem; /* Converted from 24px to rem */
+  background-color: #fff; /* White background for social icons */
+  border-radius: 50%; /* Make icons circular */
+  padding: 0.5rem; /* Add padding around icons */
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 0.0625rem solid #ddd; /* Converted from 1px to rem */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff; /* Changed to white */
+}
+
+/* Responsive styles */
+
+/* For screens smaller than 80rem (1280px) */
+@media (max-width: 80rem) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .footer-links {
+    margin-left: 0;
+  }
+
+  .footer-social-icons {
+    margin-top: 1rem;
+  }
+}
+
+/* For screens smaller than 64rem (1024px) */
+@media (max-width: 64rem) {
+  .footer-top {
+    padding: 1rem;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .footer-social-icons {
+    margin-bottom: 2rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+/* For screens smaller than 50rem (800px) */
+@media (max-width: 50rem) {
+  .footer-top {
+    padding: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+}
+
+/* For screens smaller than 31.25rem (500px) */
+@media (max-width: 31.25rem) {
+  .footer-logo-icon {
+    width: 5rem; /* Converted from 80px to rem */
+  }
+
+  .footer-links h3, 
+  .footer-social-icons h3 {
+    font-size: 1rem;
+  }
+
+  .footer-links li {
+    font-size: 0.875rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+
+  .footer-top {
+    padding: 0.5rem;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+}

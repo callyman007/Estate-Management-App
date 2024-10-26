@@ -1,0 +1,184 @@
+/* IDCard.css */
+.id-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 2rem;
+  font-family: Montserrat;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+  max-width: 40rem; /* Adjust as needed */
+  margin: 2rem auto; /* Center the card horizontally */
+}
+.back {
+  display: flex;
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  background-color: #fbfbfb;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.id-card h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.id-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-details {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.card-details p {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+/* Action button styles */
+.id-card-actions {
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  width: 16rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-evenly; /* Center the buttons horizontally */
+  gap: 2rem;
+  margin: 0 auto;
+  
+}
+
+.id-card-actions button {
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #00274c;
+  color: white;
+  display: flex;
+  align-items: center; /* Vertically center the icon and text */
+  justify-content: center; /* Center the icon and text horizontally */
+  gap: 0.5rem; /* Space between icon and text */
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.id-card-actions button:hover {
+  background-color: #0056b3;
+}
+
+.id-card-actions button:active {
+  background-color: #00274c;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+}
+
+/* Print-specific styles */
+@media print {
+  body {
+    padding-top: 4rem;
+    padding-left: 5rem;
+  }
+
+  .id-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .id-card {
+    width: 100%;
+    max-width: 37.5rem; /* Adjust to ensure the ID card fits on a single page */
+    margin: 0;
+    box-shadow: none; /* Remove box-shadow for print */
+    border: none; /* Remove border for print */
+  }
+
+  .id-card-actions {
+    display: none; /* Hide action buttons during print */
+  }
+
+  /* Ensure that content is not split across pages */
+  .id-card {
+    page-break-inside: avoid;
+  }
+}
+
+  @media (max-width: 80rem) { /* 1280px */
+  .id-card {
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 64rem) { /* 1024px */
+  .id-card {
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 50rem) { /* 800px */
+  .id-card {
+    margin: 1rem auto;
+  }
+
+  .id-card-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+    .id-card-actions button {
+      font-size: 0.8rem;
+      width: 7rem;
+      height: 2.2rem;
+    }
+      
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+  }
+
+
+}
+
+@media (max-width: 31.25rem) { /* 500px */
+  .id-card-actions{
+    flex: 1;
+  }
+
+  .id-card-actions button {
+      font-size: 0.8rem;
+      width: 7rem;
+      height: 2.2rem;
+    }
+      
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+  }
+}

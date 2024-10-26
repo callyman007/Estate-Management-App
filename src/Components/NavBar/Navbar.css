@@ -1,0 +1,328 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Adjusted from space-between for equal spacing */
+    padding: 1rem; /* 16px */
+    box-shadow: 0 0.0625rem 0.1875rem -0.125rem black; /* 1px 3px -2px */
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+/* Logo and brand name */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* 10px */
+}
+
+.nav-logo p {
+    color: #00274c;
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    font-family: Montserrat;
+}
+
+.nav-logo img {
+   width: 3.125rem; /* 50px Adjusted size for logo */
+}
+/* Menu items */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem; /* 32px */
+    color: #000000;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 500;
+    font-family: Montserrat;
+}
+
+/* Specific color for links */
+.nav-menu a {
+    color: #000000; /* Ensure menu links are black by default */
+    text-decoration: none; /* Remove underline */
+}
+
+
+/* Hover and active styles */
+.nav-menu li:hover a,
+.nav-menu li a:active {
+    color: #00274c; /* Change to desired color on hover or active state */
+}
+
+
+/* Active state underline for the selected item */
+.nav-menu hr {
+    border: none;
+    width: 80%;
+    height: 0.1875rem; /* 3px */
+    border-radius: 0.625rem; /* 10px */
+    background: #00274c; /* Active underline color */
+    position: absolute;
+    bottom: -1.25rem; /* -20px  Adjusted position */
+    left: 10%; /* Adjusted position */
+    transform: scaleX(0); /* Initially scale to 0 width */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.nav-menu li:hover hr {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.125rem; /* 2px */
+    cursor: pointer;
+    position: relative; /* Added for positioning */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.nav-menu li:hover {
+    transform: translateY(-0.3125rem); /* -5px Lift up on hover */
+}
+
+/* Login button */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: inherit;
+    top: 1.875rem;
+    width: 9.8125rem; /* 157px */
+    height: 3.625rem; /* 58px */
+    outline: none;
+    border: 0.0625rem solid #00274c; /* 1px border with dark color */
+    border-radius: 4.6875rem; /* 75px */
+    color: #fff; /* Text color to match border */
+    font-size: 1.25rem; /* 20px */
+    font-weight: 500;
+    font-family: Montserrat;
+    background: #00274c; /* White background */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
+    text-decoration: none; /* Ensure no text decoration */
+}
+
+.login a {
+    text-decoration: none; /* Ensure no text decoration on link inside button */
+    color: inherit; /* Inherit color from button */
+}
+
+.login:hover {
+    background-color: #e0e0e0; /* Light gray background on hover */
+    color: #00274c; /* Text color on hover */
+}
+
+/* Hover effect for link inside button */
+.login:hover a {
+    color: #00274c; /* Text color on hover */
+}
+
+
+/* Menu icon */
+.menu_icon {
+    display: none;
+}
+.rotate {
+    transform: rotate(180deg); /* Rotate 180 degrees */
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+
+@media (max-width: 80rem) { /* 1280px */
+    .navbar {
+        padding: 1rem 1.25rem; /* 16px 20px */
+    }
+    .nav-logo img {
+        width: 2.5rem; /* 40px */
+    }
+    .nav-logo p {
+        font-size: 1.5rem; /* 24px */
+    }
+    .nav-menu {
+        gap: 1.5rem; /* 30px */
+        font-size: 1rem; /* 16px */
+    }
+    .login {
+        top: 1.25rem;
+        width: 7.5rem; /* 120px */
+        height: 2.8125rem; /* 45px */
+        font-size: 1rem; /* 16px */
+    }
+}
+
+@media (max-width: 64rem) { /* 1024px */
+    .navbar {
+        padding: 1rem 1.25rem; /* 16px 20px */
+    }
+    .nav-logo p {
+    font-size: 1.125rem; /* 18px */
+    }
+    .nav-menu {
+        gap: 1rem; /* 16px */
+        font-size: 0.875rem; /* 14px */
+    }
+    .login{
+        top: 1.25rem;
+        width: 5rem; /* 80px */
+        height: 2.1875rem; /* 35px */
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+@media (max-width: 50rem) { /* 800px */
+    .navbar {
+        padding: 0.625rem 1.875rem; /* 10px 30px */
+        justify-content: space-between; /* Adjusted for mobile layout */
+    }
+    .nav-logo p {
+    font-size: 1.125rem; /* 18px */
+}
+    .menu_icon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 1.75rem; /* 28px */
+        height: 1.75rem; /* 28px */
+        cursor: pointer;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.625rem; /* 10px */
+        position: absolute;
+        top: 100%; /* Adjusted position */
+        left: 0;
+        width: 100%;
+        background: #f3f3f3;
+        z-index: 1000;
+        opacity: 0; /* Initially hidden */
+        pointer-events: none; /* Disable pointer events */
+        transition: opacity 0.3s ease; /* Smooth fade-in/out transition */
+    }
+    .nav-menu.flex {
+        top: 4.25rem; /* 68px */
+        display: flex;
+        background-color: #00274c;
+        justify-content: center;
+        height: 10rem;
+        opacity: 1; /* Show menu on toggle */
+        pointer-events: auto; /* Enable pointer events */
+    }
+    .nav-menu li {
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0; /* 12px */
+        left: -1.5rem;
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-0.625rem); /* -10px  Slide down animation */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+    .nav-menu.flex li {
+        opacity: 1; /* Show menu items on toggle */
+        transform: translateY(0); /* Slide down animation */
+        color: #fff;
+    }
+    .nav-menu.flex hr {
+        width: 30%;
+        left: 35%;
+        top: 70%;
+        background-color: #fff;
+    }
+    .nav-menu hr {
+        width: 50%;
+        left: 25%;
+    }
+    .login {
+        position: absolute;
+        top: 2.5rem; /* Adjusted position for better alignment */
+        right: 5rem; /* Adjusted position for better alignment */
+    }
+    /* Specific color for links */
+.nav-menu a {
+    color: #ffffff; /* Ensure menu links are black by default */
+    text-decoration: none; /* Remove underline */
+}
+
+
+/* Hover and active styles */
+.nav-menu li:hover a,
+.nav-menu li a:active {
+    color: #ffffff; /* Change to desired color on hover or active state */
+}
+
+}
+
+@media(max-width: 31.25rem) { /* 500px */
+    .navbar {
+        padding: 0.5rem 1rem; /* 8px 16px */
+        gap: 0;
+    }
+        .nav-logo p {
+    font-size: 1.25rem; /* 20px */
+}
+    .nav-logo {
+        transform: scale(0.8);
+    }
+    .menu_icon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 1.75rem; /* 28px */
+        height: 1.75rem; /* 28px */
+        cursor: pointer;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.625rem; /* 10px */
+        position: absolute;
+        top: 100%; /* Adjusted position */
+        left: 0;
+        width: 100%;
+        background: #f3f3f3;
+        z-index: 1000;
+        opacity: 0; /* Initially hidden */
+        pointer-events: none; /* Disable pointer events */
+        transition: opacity 0.3s ease; /* Smooth fade-in/out transition */
+    }
+    .nav-menu.flex {
+        display: flex;
+        opacity: 1; /* Show menu on toggle */
+        justify-content: center;
+        pointer-events: auto; /* Enable pointer events */
+        height: 10rem;
+    }
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        left: -1.5rem;
+        padding: 0.5rem 0; /* 8px */
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-10px); /* Slide down animation */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+    .nav-menu.flex li {
+        opacity: 1; /* Show menu items on toggle 
+        transform: translateY(0); /* Slide down animation */
+    }
+    .nav-menu hr {
+        width: 50%;
+        left: 25%;
+    }
+    .login {
+        top: 2.4rem;
+        position: absolute;
+        right: 4rem;
+    }
+    /* Hover effect for mobile */
+    .nav-menu li:hover {
+        background-color: transparent; /* Keep background transparent on hover */
+    }
+} 
+

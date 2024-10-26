@@ -1,0 +1,7 @@
+Full Name
+Phone Number
+House allocation Verification Number(Upon successful verification, automatically fills the house address)
+House Address
+Email Address
+Password
+Passport

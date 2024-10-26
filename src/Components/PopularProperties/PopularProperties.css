@@ -1,0 +1,170 @@
+/* PopularProperties.css */
+
+/* Base styles */
+.popular-properties {
+  padding: 2rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.popular-property-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+}
+
+.popular-property-see-all {
+  color: #00274c;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+.popular-property-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Adjust the gap as needed */
+  justify-content: space-between; /* Space out items in the row */
+}
+
+.property-item {
+  flex: 1 1 calc(50% - 5rem); /* 50% width minus gap */
+  box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+  display: flex;
+  flex-direction: column;
+}
+
+.property-image {
+  width: 100%;
+  height: 15rem; /* Fixed height for images */
+  display: block;
+  object-fit: cover; /* Ensures the image covers the container */
+  transition: opacity 0.3s ease;
+}
+
+.property-item:hover .property-image {
+  opacity: 0.8; /* Slightly fade image on hover */
+}
+
+.property-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 1rem;
+}
+
+.property-address {
+  font-size: 1rem; /* 16px */
+  color: #666;
+  margin: 0 1rem 0.5rem;
+}
+
+.property-price {
+  left: -4rem;
+  font-size: 1.125rem; /* 18px */
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0 1rem 1rem;
+  text-align: center; /* Center-align text */
+}
+
+/* Media Queries */
+
+/* For screens smaller than 80rem (1280px) */
+@media (max-width: 80rem) {
+  .PopularProperties {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .title h1 {
+    font-size: 1.75rem;
+  }
+
+  .see-all {
+    font-size: 0.9rem;
+  }
+
+  .property-image {
+    height: 12rem; /* Adjust height for medium screens */
+  }
+}
+
+/* For screens smaller than 64rem (1024px) */
+@media (max-width: 64rem) {
+  .popular-properties {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .popular-property-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .popular-property-see-all {
+    font-size: 0.85rem;
+  }
+
+  .property-image {
+    height: 10rem; /* Adjust height for smaller screens */
+  }
+}
+
+/* For screens smaller than 50rem (800px) */
+@media (max-width: 50rem) {
+  .popular-properties {
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .popular-property-title h1 {
+    font-size: 1.25rem;
+  }
+
+  .popular-property-see-all {
+    font-size: 0.8rem;
+  }
+
+  .property-image {
+    height: 8rem; /* Further adjust height for very small screens */
+  }
+
+  .property-item {
+    flex: 1 1 calc(100% - 1rem); /* Full-width items with margin */
+  }
+}
+
+/* For screens smaller than 31.25rem (500px) */
+@media (max-width: 31.25rem) {
+  .popular-properties {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .popular-property-title h1 {
+    font-size: 1rem;
+  }
+
+  .popular-property-see-all {
+    font-size: 0.75rem;
+  }
+
+  .property-image {
+    height: 6rem; /* Minimum height for very small screens */
+  }
+
+  .property-item {
+    flex: 1 1 100%; /* Full-width items */
+  }
+}

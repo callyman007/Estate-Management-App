@@ -1,0 +1,12 @@
+/* Font.css */
+@font-face {
+  font-family: 'Poppins';
+  src: url('./Poppins-Black.otf') format('otf'),
+        url('./Poppins-Light.otf') format('otf'),
+        url('./Poppins-Medium.otf') format('otf'),
+        url('./Poppins-SemiBold.otf') format('otf'),
+        url('./Poppins-Bold.otf') format('otf');
+  /* Add additional formats if needed */
+  font-weight: normal;
+  font-style: normal;
+}
